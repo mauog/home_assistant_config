@@ -1,0 +1,10 @@
+- platform: time_date
+  display_options:
+    - 'date_time'
+
+- platform: template
+  sensors:
+    date_template:
+      friendly_name: 'Date'
+      icon_template: mdi:calendar
+      value_template: '{{ as_timestamp(now()) | timestamp_custom("%c", True) }}'

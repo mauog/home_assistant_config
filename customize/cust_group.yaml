@@ -1,0 +1,8 @@
+group.echo:
+  order: 3
+group.meteo:
+  order: 1
+group.switches:
+  order: 2
+group.automations:
+  order: 4

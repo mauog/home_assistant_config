@@ -1,0 +1,14 @@
+switches:
+  name: Switches
+  view: yes
+  entities:
+    - switch.lavatrice
+    - group.lavatrice
+
+lavatrice:
+  name: Lavatrice
+  view: no
+  entities: 
+    - sensor.lavatrice_watts
+    - sensor.lavatrice_total_Kwh
+  

@@ -1,0 +1,5 @@
+date_card:
+  name: Date
+  view: no
+  entities:
+    - sensor.date_template

@@ -1,0 +1,45 @@
+- platform: darksky
+  name: "dark_sky"
+  api_key: !secret dark_sky_api_key
+  language: en
+  update_interval:
+    days: 0
+    hours: 0
+    minutes: 5
+    seconds: 00
+    milliseconds: 0
+  monitored_conditions:
+    - apparent_temperature
+    - apparent_temperature_high
+    - apparent_temperature_low
+    - cloud_cover
+    - daily_summary
+    - dew_point
+    - hourly_summary
+    - humidity
+    - icon
+    - minutely_summary
+    - moon_phase
+    - ozone
+    - precip_accumulation
+    - precip_intensity
+    - precip_intensity_max
+    - precip_probability
+    - precip_type
+    - pressure
+    - summary
+    - temperature
+    - temperature_high
+    - temperature_low
+    - uv_index
+    - visibility
+    - wind_bearing
+    - wind_speed
+  forecast:
+    - 1
+    - 2
+    - 3
+    - 4
+    - 5
+    - 6
+    - 7

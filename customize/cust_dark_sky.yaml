@@ -1,0 +1,44 @@
+sensor.dark_sky_temperature:
+  friendly_name: Temperature
+sensor.dark_sky_summary:
+  friendly_name: Condition
+sensor.dark_sky_humidity:
+  friendly_name: Humidity
+sensor.dark_sky_pressure:
+  friendly_name: Pressure
+sensor.dark_sky_wind_speed:
+  friendly_name: Wind Speed
+sensor.dark_sky_wind_bearing:
+  friendly_name: Wind bearing
+sensor.dark_sky_apparent_temperature:
+  friendly_name: Temperature (apparent)
+sensor.dark_sky_dew_point:
+  friendly_name: Dew point
+sensor.dark_sky_precip:
+  friendly_name: Type
+sensor.dark_sky_precip_intensity:
+  friendly_name: Intensity
+sensor.dark_sky_daily_max_precip_intensity:
+  friendly_name: Max (expected today)
+sensor.dark_sky_precip_accumulation:
+  friendly_name: Accumulation
+sensor.dark_sky_precip_probability:
+  friendly_name: Probability
+sensor.dark_sky_hourly_summary:
+  friendly_name: Hourly summary
+sensor.dark_sky_daily_summary:
+  friendly_name: Daily summary
+sensor.dark_sky_minutely_summary:
+  friendly_name: Minutely summary
+sensor.dark_sky_moon_phase:
+  friendly_name: Moon phase
+sensor.dark_sky_ozone:
+  friendly_name: Ozone
+sensor.dark_sky_uv_index:
+  friendly_name: UV index
+sensor.dark_sky_visibility:
+  friendly_name: Sky visibility
+sensor.dark_sky_daytime_high_temperature:
+  friendly_name: Max temperature
+sensor.dark_sky_overnight_low_temperature:
+  friendly_name: Min temperature

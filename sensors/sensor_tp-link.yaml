@@ -1,0 +1,18 @@
+- platform: template
+  sensors:
+    lavatrice_watts:
+      friendly_name_template: "{{ states.switch.lavatrice.name}} Current Consumption"
+      value_template: '{{ states.switch.lavatrice.attributes["current_power_w"] | float }}'
+      unit_of_measurement: 'W'
+    lavatrice_total_kwh:
+      friendly_name_template: "{{ states.switch.lavatrice.name}} Total Consumption"
+      value_template: '{{ states.switch.lavatrice.attributes["total_energy_kwh"] | float }}'
+      unit_of_measurement: 'kWh'
+    lavatrice_volts:
+      friendly_name_template: "{{ states.switch.lavatrice.name}} Voltage"
+      value_template: '{{ states.switch.lavatrice.attributes["voltage"] | float }}'
+      unit_of_measurement: 'V'
+    lavatrice_today_kwh:
+      friendly_name_template: "{{ states.switch.lavatrice.name}} Today's Consuption"
+      value_template: '{{ states.switch.lavatrice.attributes["today_energy_kwh"] | float }}'
+      unit_of_measurement: 'kWh'

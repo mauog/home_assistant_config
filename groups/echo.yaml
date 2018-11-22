@@ -1,0 +1,9 @@
+echo:
+  name: Echo
+  view: yes
+  entities:
+    - media_player.camera
+    - media_player.cameretta
+    - media_player.cucina
+    - media_player.sala
+    - media_player.sotto

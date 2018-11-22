@@ -1,0 +1,7 @@
+automation:
+  name: Automations
+  view: yes
+  entities:
+     - automation.update_available_notifications
+     - automation.accende_le_luci_di_natale
+     - automation.spegne_le_luci_di_natale
