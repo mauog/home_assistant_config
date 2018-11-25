@@ -4,6 +4,7 @@ switches:
   entities:
     - switch.lavatrice
     - group.lavatrice
+    - group.tasmota
 
 lavatrice:
   name: Lavatrice
@@ -11,4 +12,10 @@ lavatrice:
   entities: 
     - sensor.lavatrice_watts
     - sensor.lavatrice_total_Kwh
-  
+
+tasmota:
+  name: Tasmota  
+  view: no
+  entities:
+    - switch.sonoff_pow
+    - switch.sonoff_xmas
