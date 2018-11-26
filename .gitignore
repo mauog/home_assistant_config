@@ -8,6 +8,7 @@
 !.gitignore
 !*.md
 !*.travis.yml
+!os_misc.tgz
 *.conf
 *.txt
 *.log
