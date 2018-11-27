@@ -1,0 +1,19 @@
+- platform: mqtt
+  name: "Sonoff_Pow"
+  state_topic: stat/sonoff_pow/POWER
+  command_topic: cmnd/sonoff_pow/POWER
+  qos: 0
+  payload_on: ON
+  payload_off: OFF
+  optimistic: false
+  retain: true
+
+- platform: mqtt
+  name: "Sonoff_xmas"
+  state_topic: stat/sonoff_xmas/POWER
+  command_topic: cmnd/sonoff_xmas/POWER
+  qos: 0
+  payload_on: ON
+  payload_off: OFF
+  optimistic: false
+  retain: true

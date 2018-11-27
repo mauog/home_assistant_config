@@ -3,6 +3,7 @@
 !sensors
 !groups
 !customize
+!switches
 !custom_components
 !*.yaml
 !.gitignore

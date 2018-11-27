@@ -85,8 +85,8 @@ mqtt:
   password: !secret mqtt_password
 
 
-decon:
-  host: 10.9.12.2 
+deconz:
+  host: 10.9.12.2
   port: 80
 
 logger:
