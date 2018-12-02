@@ -58,7 +58,7 @@ meteo_forecast:
   view: no
   entities:
     - sensor.dark_sky_icon_0
-    - sensor.dark_sky_icon_1
+    - sensor.forecast_1
     - sensor.dark_sky_icon_2
     - sensor.dark_sky_icon_3
     - sensor.dark_sky_icon_4
