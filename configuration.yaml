@@ -27,6 +27,7 @@ config:
 #   base_url: example.duckdns.org:8123
 http:
   api_password: !secret http_api_password
+  base_url: soylent.duckdns.org:8123
 
 duckdns:
   domain: !secret duckdns_domain 

@@ -53,5 +53,63 @@
         {% set m_ok = date | timestamp_custom("%m") | int %}
         {% set g_ok = date | timestamp_custom("%w") | int %}
         {{day[g_ok] + ' ' + date | timestamp_custom("%d") + ' ' + month[m_ok - 1]}}
-#      value_template: "{{states.sensor.dark_sky_icon_1.state}}"
-      value_template: 100
+      value_template: "{{states.sensor.dark_sky_icon_1.state}}"
+      entity_picture_template: >-
+        {% if states.sensor.dark_sky_icon_1.state == "clear-day" %}
+          mdi:weather-sunny
+        {%- endif %}
+        
+    forecast_2:
+      friendly_name_template: >
+        {%- set date = as_timestamp(now()) + (2 * 86400 ) -%}
+        {% set day = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"] %}
+        {% set month = ["January", "February", "Marsh", "April", "May", "june", "July", "August", "September", "October", "November", "December"] %}
+        {% set m_ok = date | timestamp_custom("%m") | int %}
+        {% set g_ok = date | timestamp_custom("%w") | int %}
+        {{day[g_ok] + ' ' + date | timestamp_custom("%d") + ' ' + month[m_ok - 1]}}
+      value_template: "{{states.sensor.dark_sky_icon_2.state}}"
+    forecast_3:
+      friendly_name_template: >
+        {%- set date = as_timestamp(now()) + (3 * 86400 ) -%}
+        {% set day = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"] %}
+        {% set month = ["January", "February", "Marsh", "April", "May", "june", "July", "August", "September", "October", "November", "December"] %}
+        {% set m_ok = date | timestamp_custom("%m") | int %}
+        {% set g_ok = date | timestamp_custom("%w") | int %}
+        {{day[g_ok] + ' ' + date | timestamp_custom("%d") + ' ' + month[m_ok - 1]}}
+      value_template: "{{states.sensor.dark_sky_icon_3.state}}"
+    forecast_4:
+      friendly_name_template: >
+        {%- set date = as_timestamp(now()) + (4 * 86400 ) -%}
+        {% set day = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"] %}
+        {% set month = ["January", "February", "Marsh", "April", "May", "june", "July", "August", "September", "October", "November", "December"] %}
+        {% set m_ok = date | timestamp_custom("%m") | int %}
+        {% set g_ok = date | timestamp_custom("%w") | int %}
+        {{day[g_ok] + ' ' + date | timestamp_custom("%d") + ' ' + month[m_ok - 1]}}
+      value_template: "{{states.sensor.dark_sky_icon_4.state}}"
+    forecast_5:
+      friendly_name_template: >
+        {%- set date = as_timestamp(now()) + (5 * 86400 ) -%}
+        {% set day = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"] %}
+        {% set month = ["January", "February", "Marsh", "April", "May", "june", "July", "August", "September", "October", "November", "December"] %}
+        {% set m_ok = date | timestamp_custom("%m") | int %}
+        {% set g_ok = date | timestamp_custom("%w") | int %}
+        {{day[g_ok] + ' ' + date | timestamp_custom("%d") + ' ' + month[m_ok - 1]}}
+      value_template: "{{states.sensor.dark_sky_icon_5.state}}"
+    forecast_6:
+      friendly_name_template: >
+        {%- set date = as_timestamp(now()) + (6 * 86400 ) -%}
+        {% set day = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"] %}
+        {% set month = ["January", "February", "Marsh", "April", "May", "june", "July", "August", "September", "October", "November", "December"] %}
+        {% set m_ok = date | timestamp_custom("%m") | int %}
+        {% set g_ok = date | timestamp_custom("%w") | int %}
+        {{day[g_ok] + ' ' + date | timestamp_custom("%d") + ' ' + month[m_ok - 1]}}
+      value_template: "{{states.sensor.dark_sky_icon_6.state}}"
+    forecast_7:
+      friendly_name_template: >
+        {%- set date = as_timestamp(now()) + (7 * 86400 ) -%}
+        {% set day = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"] %}
+        {% set month = ["January", "February", "Marsh", "April", "May", "june", "July", "August", "September", "October", "November", "December"] %}
+        {% set m_ok = date | timestamp_custom("%m") | int %}
+        {% set g_ok = date | timestamp_custom("%w") | int %}
+        {{day[g_ok] + ' ' + date | timestamp_custom("%d") + ' ' + month[m_ok - 1]}}
+      value_template: "{{states.sensor.dark_sky_icon_7.state}}"
