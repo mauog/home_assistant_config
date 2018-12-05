@@ -27,7 +27,9 @@ config:
 #   base_url: example.duckdns.org:8123
 http:
   api_password: !secret http_api_password
-  base_url: soylent.duckdns.org:8123
+  base_url: !secret base_url
+  ssl_certificate: !secret ssl_certificate
+  ssl_key: !secret ssl_key
 
 duckdns:
   domain: !secret duckdns_domain 
@@ -80,7 +82,7 @@ script: !include scripts.yaml
 media_player:
   - platform: alexa
     email: !secret email_alexa
-    password: !secret alexa
+    password: !secret alexa_password
     url: amazon.it
 
 switch: !include_dir_merge_list switches/
@@ -95,11 +97,11 @@ mqtt:
 
 
 deconz:
-  host: 10.9.12.2
+  host: !secret my_host_ip
   port: 80
 
-logger:
-  default: info
-  logs:
-    pydeconz: debug
-    homeassistant.components.deconz: debug
+#logger:
+#  default: info
+#  logs:
+#    pydeconz: debug
+#    homeassistant.components.deconz: debug
