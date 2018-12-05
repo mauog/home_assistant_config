@@ -27,3 +27,17 @@
     offset: '00:30:00'
   action:
     - service: script.xmas_light_toggle
+
+######################################################################
+
+- id: washing_machine
+  alias: "Avvisa quando la lavatrice ha finito"
+  trigger:
+    platform: numeric_state
+    entity_id: switch.lavatrice_watts
+    below: 1.0
+  action:
+    service: notify.ios_mauros_iphone
+    data_template:
+      title: "Bucato Terminato"
+      message: "La lavatrice ha finito. Ora puoi stendere il bucato"
