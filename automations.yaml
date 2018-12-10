@@ -1,43 +1,85 @@
 - id: notify_new_ha
-  alias: 'Update Available Notifications'
+  alias: Update Available Notifications
   trigger:
     platform: state
     entity_id: updater.updater
   action:
     service: notify.notify
     data:
-      message: 'Update for Home Assistant is available.'
-
-######################################################################
-
+      message: Update for Home Assistant is available.
 - id: xmas_light_on
-  alias: Accende le luci di Natale
+  alias: Luci di Natale ON
   trigger:
+  - event: sunset
+    offset: -00:30:00
     platform: sun
-    event: sunset
-    offset: '-00:30:00'
   action:
-    - service: script.xmas_light_toggle
-
-- id: xmas_light_on
-  alias: Spegne le luci di Natale
+  - service: script.xmas_light_toggle
+- id: xmas_light_off
+  alias: Luci di Natale OFF
   trigger:
     platform: sun
     event: sunrise
-    offset: '00:30:00'
+    offset: 00:30:00
   action:
-    - service: script.xmas_light_toggle
-
-######################################################################
-
-- id: washing_machine
-  alias: "Avvisa quando la lavatrice ha finito"
+  - service: script.xmas_light_toggle
+- id: '1544266085345'
+  alias: Lavatrice ON
   trigger:
+  - above: '2'
+    entity_id: sensor.lavatrice_watts
     platform: numeric_state
-    entity_id: switch.lavatrice_watts
-    below: 1.0
+  condition:
+  - condition: state
+    entity_id: input_boolean.washingmachine_status
+    state: 'off'
   action:
+  - data:
+      entity_id: input_boolean.washingmachine_status
+    service: input_boolean.turn_on
+- id: '1544280061852'
+  alias: Lavatrice OFF
+  trigger:
+  - below: '2'
+    entity_id: sensor.lavatrice_watts
+    platform: numeric_state
+  condition:
+  - condition: state
+    entity_id: input_boolean.washingmachine_status
+    state: 'on'
+  action:
+  - data:
+      entity_id: input_boolean.washingmachine_status
+    service: input_boolean.turn_off
+  - data_template:
+      message: La lavatrice ha finito. Ora puoi stendere il bucato
+      title: Bucato Terminato
     service: notify.ios_mauros_iphone
-    data_template:
-      title: "Bucato Terminato"
-      message: "La lavatrice ha finito. Ora puoi stendere il bucato"
+- id: '1544467402484'
+  alias: Lucine ON
+  trigger:
+  - event: sunset
+    offset: -00:45:00
+    platform: sun
+  condition:
+  - condition: state
+    entity_id: switch.lucine_casa
+    state: 'off'
+  action:
+  - data:
+      entity_id: switch.lucine_casa
+    service: switch.turn_on
+- id: '1544467476328'
+  alias: Lucine OFF
+  trigger:
+  - event: sunset
+    offset: +00:45:00
+    platform: sun
+  condition:
+  - condition: state
+    entity_id: switch.lucine_casa
+    state: 'on'
+  action:
+  - data:
+      entity_id: switch.lucine_casa
+    service: switch.turn_off

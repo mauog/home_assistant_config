@@ -105,3 +105,5 @@ deconz:
 #  logs:
 #    pydeconz: debug
 #    homeassistant.components.deconz: debug
+
+input_boolean: !include boolean.yaml

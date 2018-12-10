@@ -5,6 +5,7 @@ switches:
     - switch.lavatrice
     - group.lavatrice
     - group.tasmota
+    - switch.lucine_casa
 
 lavatrice:
   name: Lavatrice
@@ -12,6 +13,7 @@ lavatrice:
   entities: 
     - sensor.lavatrice_watts
     - sensor.lavatrice_total_Kwh
+    - input_boolean.washingmachine_status
 
 tasmota:
   name: Tasmota  

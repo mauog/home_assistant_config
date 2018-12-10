@@ -1,0 +1,3 @@
+washingmachine_status:
+    name: Lavatrice stato
+    initial: off
