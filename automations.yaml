@@ -7,22 +7,6 @@
     service: notify.notify
     data:
       message: Update for Home Assistant is available.
-- id: xmas_light_on
-  alias: Luci di Natale ON
-  trigger:
-  - event: sunset
-    offset: -00:30:00
-    platform: sun
-  action:
-  - service: script.xmas_light_toggle
-- id: xmas_light_off
-  alias: Luci di Natale OFF
-  trigger:
-    platform: sun
-    event: sunrise
-    offset: 00:30:00
-  action:
-  - service: script.xmas_light_toggle
 - id: '1544266085345'
   alias: Lavatrice ON
   trigger:
@@ -72,8 +56,8 @@
 - id: '1544467476328'
   alias: Lucine OFF
   trigger:
-  - event: sunset
-    offset: +00:45:00
+  - event: sunrise
+    offset: +00:30:00
     platform: sun
   condition:
   - condition: state

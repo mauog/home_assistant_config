@@ -4,7 +4,7 @@ switches:
   entities:
     - switch.lavatrice
     - group.lavatrice
-    - group.tasmota
+#    - group.tasmota
     - switch.lucine_casa
 
 lavatrice:
@@ -15,9 +15,9 @@ lavatrice:
     - sensor.lavatrice_total_Kwh
     - input_boolean.washingmachine_status
 
-tasmota:
-  name: Tasmota  
-  view: no
-  entities:
-    - switch.sonoff_pow
-    - switch.sonoff_xmas
+#tasmota:
+#  name: Tasmota  
+#  view: no
+#  entities:
+#    - switch.sonoff_pow
+#    - switch.sonoff_xmas

@@ -17,3 +17,9 @@ sonoff_pow_off:
       payload: 'off'
       topic: cmnd/sonoff_pow/POWER
     service: mqtt.publish
+'1544535007298':
+  alias: Test Notifiation
+  sequence:
+  - data:
+      message: Test
+    service: notify.ios_mauros_iphone
