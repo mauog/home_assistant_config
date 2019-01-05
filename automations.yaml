@@ -1,12 +1,12 @@
 - id: notify_new_ha
   alias: Update Available Notifications
   trigger:
+  - entity_id: updater.updater
     platform: state
-    entity_id: updater.updater
   action:
-    service: notify.notify
-    data:
+  - data:
       message: Update for Home Assistant is available.
+    service: notify.ios_mauros_iphone
 - id: '1544266085345'
   alias: Lavatrice ON
   trigger:
@@ -39,6 +39,10 @@
       message: La lavatrice ha finito. Ora puoi stendere il bucato
       title: Bucato Terminato
     service: notify.ios_mauros_iphone
+  - data_template:
+      message: La lavatrice ha finito. Ora puoi stendere il bucato
+      title: Bucato Terminato
+    service: notify.ios_grazia_iphone
 - id: '1544467402484'
   alias: Lucine ON
   trigger:

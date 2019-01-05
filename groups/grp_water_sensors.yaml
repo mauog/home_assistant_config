@@ -1,0 +1,13 @@
+water_sensors:
+  name: Water Leakage
+  view: yes
+  entities:
+    - group.water_leakage
+
+water_leakage:
+  name: "Water Leakage Sensors"
+  view: no
+  entities:
+    - binary_sensor.0x00158d00022f07db_water_leak
+    - binary_sensor.0x00158d00024d84eb_water_leak
+    - binary_sensor.0x00158d00022f07f7

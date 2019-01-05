@@ -84,6 +84,8 @@ media_player:
     email: !secret email_alexa
     password: !secret alexa_password
     url: amazon.it
+  - platform: samsungtv
+    host: !secret samsungtv_ip
 
 switch: !include_dir_merge_list switches/
 
@@ -105,10 +107,12 @@ mqtt:
     topic: 'hass/status'
     payload: 'offline'
 
+device_tracker:
+  - platform: bluetooth_tracker
 
-deconz:
-  host: !secret my_host_ip
-  port: 80
+#deconz:
+#  host: !secret my_host_ip
+#  port: 80
 
 input_boolean: !include boolean.yaml
 
@@ -117,5 +121,6 @@ logger:
   logs:
 #    pydeconz: debug
 #    homeassistant.components.deconz: debug
-    homeassistant.components.mqtt: debug
+#    homeassistant.components.mqtt: debug
+     homeassistant.components.switch.tplink: debug
 

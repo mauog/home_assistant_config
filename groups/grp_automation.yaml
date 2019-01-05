@@ -3,8 +3,7 @@ automation:
   view: yes
   entities:
      - automation.update_available_notifications
-     - automation.accende_le_luci_di_natale
-     - automation.spegne_le_luci_di_natale
-     - automation.avvisa_quando_la_lavatrice_ha_finito
      - automation.Lucine_ON
      - automation.Lucine_OFF
+     - automation.Lavatrice_OFF
+     - automation.lavatrice_on
