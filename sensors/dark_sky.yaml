@@ -5,7 +5,7 @@
   update_interval:
     days: 0
     hours: 0
-    minutes: 5
+    minutes: 10
     seconds: 00
     milliseconds: 0
   monitored_conditions:
@@ -36,6 +36,7 @@
     - wind_bearing
     - wind_speed
   forecast:
+    - 0
     - 1
     - 2
     - 3
@@ -54,9 +55,17 @@
         {% set g_ok = date | timestamp_custom("%w") | int %}
         {{day[g_ok] + ' ' + date | timestamp_custom("%d") + ' ' + month[m_ok - 1]}}
       value_template: "{{states.sensor.dark_sky_icon_1.state}}"
-      entity_picture_template: >-
+      icon_template: >-
         {% if states.sensor.dark_sky_icon_1.state == "clear-day" %}
           mdi:weather-sunny
+        {% elif states.sensor.dark_sky_icon_1.state == "partly-cloudy-day" or states.sensor.dark_sky_icon_1.state == "partly-cloudy-night"%}
+          mdi:weather-partlycloudy
+        {% elif states.sensor.dark_sky_icon_1.state == "snow" %}
+          mdi:weather-snowy
+        {% elif states.sensor.dark_sky_icon_1.state == "fog" %}
+          mdi:weather-fog
+        {% else %}
+          mdi:help-circle
         {%- endif %}
         
     forecast_2:
