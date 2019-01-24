@@ -112,6 +112,8 @@ mqtt:
 
 device_tracker:
   - platform: bluetooth_tracker
+    interval_seconds: 10
+    consider_home: 180
 
 #deconz:
 #  host: !secret my_host_ip
@@ -125,5 +127,5 @@ logger:
 #    pydeconz: debug
 #    homeassistant.components.deconz: debug
 #    homeassistant.components.mqtt: debug
-     homeassistant.components.switch.tplink: debug
+    homeassistant.components.switch.tplink: debug
 
