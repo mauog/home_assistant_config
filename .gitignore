@@ -4,7 +4,6 @@
 !groups
 !customize
 !switches
-!custom_components
 !*.yaml
 !.gitignore
 !*.md
