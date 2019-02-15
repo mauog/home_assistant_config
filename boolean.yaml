@@ -1,3 +1,9 @@
 washingmachine_status:
     name: Lavatrice stato
     initial: off
+dishwasher_status:
+    name: Lavastoviglie stato
+    initial: off
+appliance_status:
+    name: Appliance stato
+    initial: off

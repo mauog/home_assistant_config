@@ -97,6 +97,13 @@ ifttt:
 
 ios:
 
+#xiaomi_aqara:
+#  discovery_retry: 5
+#  gateways:
+#    - mac: 7c:49:eb:89:0d:85
+#      key: 3147802E2C344D98
+#      host: 10.9.12.20
+      
 mqtt:
   discovery: true
   broker: !secret mqtt_broker_IP
@@ -115,17 +122,20 @@ device_tracker:
     interval_seconds: 10
     consider_home: 180
 
-#deconz:
-#  host: !secret my_host_ip
-#  port: 80
+deconz:
+  host: !secret deconz_ip
+  port: 80
 
 input_boolean: !include boolean.yaml
+
+system_health:
 
 logger:
   default: info
   logs:
-#    pydeconz: debug
+    pydeconz: debug
 #    homeassistant.components.deconz: debug
 #    homeassistant.components.mqtt: debug
-    homeassistant.components.switch.tplink: debug
+#    homeassistant.components.switch.tplink: debug
+    homeassistant.components.deconz: debug
 
