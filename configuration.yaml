@@ -80,15 +80,17 @@ automation: !include automations.yaml
 script: !include scripts.yaml
 
 media_player:
-  - platform: alexa
-    email: !secret email_alexa
-    password: !secret alexa_password
-    url: amazon.it
   - platform: samsungtv
     host: !secret samsungtv_ip
     mac: !secret samsungtv_mac
     name: TV_sala
     port: 8001
+
+alexa_media:
+  accounts:
+    - email: !secret email_alexa
+      password: !secret alexa_password
+      url: amazon.it
 
 switch: !include_dir_merge_list switches/
 
@@ -132,10 +134,10 @@ system_health:
 
 logger:
   default: info
-  logs:
-    pydeconz: debug
+#  logs:
+#    pydeconz: debug
 #    homeassistant.components.deconz: debug
 #    homeassistant.components.mqtt: debug
 #    homeassistant.components.switch.tplink: debug
-    homeassistant.components.deconz: debug
+#    homeassistant.components.deconz: debug
 
