@@ -130,6 +130,11 @@ deconz:
 
 input_boolean: !include boolean.yaml
 
+
+custom_updater:
+  component_urls:
+    - https://raw.githubusercontent.com/keatontaylor/custom_components/master/custom_components.json
+
 system_health:
 
 logger:

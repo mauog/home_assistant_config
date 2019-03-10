@@ -53,7 +53,7 @@
         {{ states('sensor.dark_sky_icon_1') }}
       icon_template: >
         {%- set current = states('sensor.dark_sky_icon_1') %}
-        {%- set mapper = {'rain':'pouring', 'cloudy':'cloudy', 'clear-day':'sunny', 'partly-cloudy-day':'partlycloudy', 'partly-cloudy-night':'partlycloudy', 'snow':'snowy', 'fog':'fog'} %}
+        {%- set mapper = {'rain':'pouring', 'cloudy':'cloudy', 'clear-day':'sunny', 'partly-cloudy-day':'partlycloudy', 'partly-cloudy-night':'partlycloudy', 'snow':'snowy', 'fog':'fog', 'wind':'windy'} %}
         {{ 'mdi:weather-'+mapper[current] if current in mapper else 'mdi:help-circle' }} 
     forecast_2:
       friendly_name_template: >
@@ -62,7 +62,7 @@
         {{ states('sensor.dark_sky_icon_2') }}
       icon_template: >
         {%- set current = states('sensor.dark_sky_icon_2') %}
-        {%- set mapper = {'rain':'pouring', 'cloudy':'cloudy', 'clear-day':'sunny', 'partly-cloudy-day':'partlycloudy', 'partly-cloudy-night':'partlycloudy', 'snow':'snowy', 'fog':'fog'} %}
+        {%- set mapper = {'rain':'pouring', 'cloudy':'cloudy', 'clear-day':'sunny', 'partly-cloudy-day':'partlycloudy', 'partly-cloudy-night':'partlycloudy', 'snow':'snowy', 'fog':'fog', 'wind':'windy'} %}
         {{ 'mdi:weather-'+mapper[current] if current in mapper else 'mdi:help-circle' }} 
     forecast_3:
       friendly_name_template: >
@@ -71,7 +71,7 @@
         {{ states('sensor.dark_sky_icon_3') }}
       icon_template: >
         {%- set current = states('sensor.dark_sky_icon_3') %}
-        {%- set mapper = {'rain':'pouring', 'cloudy':'cloudy', 'clear-day':'sunny', 'partly-cloudy-day':'partlycloudy', 'partly-cloudy-night':'partlycloudy', 'snow':'snowy', 'fog':'fog'} %}
+        {%- set mapper = {'rain':'pouring', 'cloudy':'cloudy', 'clear-day':'sunny', 'partly-cloudy-day':'partlycloudy', 'partly-cloudy-night':'partlycloudy', 'snow':'snowy', 'fog':'fog', 'wind':'windy'} %}
         {{ 'mdi:weather-'+mapper[current] if current in mapper else 'mdi:help-circle' }} 
     forecast_4:
       friendly_name_template: >
@@ -80,7 +80,7 @@
         {{ states('sensor.dark_sky_icon_4') }}
       icon_template: >
         {%- set current = states('sensor.dark_sky_icon_4') %}
-        {%- set mapper = {'rain':'pouring', 'cloudy':'cloudy', 'clear-day':'sunny', 'partly-cloudy-day':'partlycloudy', 'partly-cloudy-night':'partlycloudy', 'snow':'snowy', 'fog':'fog'} %}
+        {%- set mapper = {'rain':'pouring', 'cloudy':'cloudy', 'clear-day':'sunny', 'partly-cloudy-day':'partlycloudy', 'partly-cloudy-night':'partlycloudy', 'snow':'snowy', 'fog':'fog', 'wind':'windy'} %}
         {{ 'mdi:weather-'+mapper[current] if current in mapper else 'mdi:help-circle' }} 
     forecast_5:
       friendly_name_template: >
@@ -89,7 +89,7 @@
         {{ states('sensor.dark_sky_icon_5') }}
       icon_template: >
         {%- set current = states('sensor.dark_sky_icon_5') %}
-        {%- set mapper = {'rain':'pouring', 'cloudy':'cloudy', 'clear-day':'sunny', 'partly-cloudy-day':'partlycloudy', 'partly-cloudy-night':'partlycloudy', 'snow':'snowy', 'fog':'fog'} %}
+        {%- set mapper = {'rain':'pouring', 'cloudy':'cloudy', 'clear-day':'sunny', 'partly-cloudy-day':'partlycloudy', 'partly-cloudy-night':'partlycloudy', 'snow':'snowy', 'fog':'fog', 'wind':'windy'} %}
         {{ 'mdi:weather-'+mapper[current] if current in mapper else 'mdi:help-circle' }} 
     forecast_6:
       friendly_name_template: >
@@ -98,7 +98,7 @@
         {{ states('sensor.dark_sky_icon_6') }}
       icon_template: >
         {%- set current = states('sensor.dark_sky_icon_6') %}
-        {%- set mapper = {'rain':'pouring', 'cloudy':'cloudy', 'clear-day':'sunny', 'partly-cloudy-day':'partlycloudy', 'partly-cloudy-night':'partlycloudy', 'snow':'snowy', 'fog':'fog'} %}
+        {%- set mapper = {'rain':'pouring', 'cloudy':'cloudy', 'clear-day':'sunny', 'partly-cloudy-day':'partlycloudy', 'partly-cloudy-night':'partlycloudy', 'snow':'snowy', 'fog':'fog', 'wind':'windy'} %}
         {{ 'mdi:weather-'+mapper[current] if current in mapper else 'mdi:help-circle' }} 
     forecast_7:
       friendly_name_template: >
@@ -107,5 +107,5 @@
         {{ states('sensor.dark_sky_icon_7') }}
       icon_template: >
         {%- set current = states('sensor.dark_sky_icon_7') %}
-        {%- set mapper = {'rain':'pouring', 'cloudy':'cloudy', 'clear-day':'sunny', 'partly-cloudy-day':'partlycloudy', 'partly-cloudy-night':'partlycloudy', 'snow':'snowy', 'fog':'fog'} %}
+        {%- set mapper = {'rain':'pouring', 'cloudy':'cloudy', 'clear-day':'sunny', 'partly-cloudy-day':'partlycloudy', 'partly-cloudy-night':'partlycloudy', 'snow':'snowy', 'fog':'fog', 'wind':'windy'} %}
         {{ 'mdi:weather-'+mapper[current] if current in mapper else 'mdi:help-circle' }} 

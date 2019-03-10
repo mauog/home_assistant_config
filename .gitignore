@@ -9,6 +9,7 @@
 !*.md
 !*.travis.yml
 !os_misc.tgz
+!custom_components
 *.conf
 *.txt
 *.log
