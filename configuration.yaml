@@ -99,13 +99,6 @@ ifttt:
 
 ios:
 
-#xiaomi_aqara:
-#  discovery_retry: 5
-#  gateways:
-#    - mac: 7c:49:eb:89:0d:85
-#      key: 3147802E2C344D98
-#      host: 10.9.12.20
-      
 mqtt:
   discovery: true
   broker: !secret mqtt_broker_IP
@@ -134,6 +127,9 @@ input_boolean: !include boolean.yaml
 custom_updater:
   component_urls:
     - https://raw.githubusercontent.com/keatontaylor/custom_components/master/custom_components.json
+  track:
+   - cards
+   - components
 
 system_health:
 

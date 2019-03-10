@@ -2,7 +2,7 @@
   name: "dark_sky"
   api_key: !secret dark_sky_api_key
   language: en
-  update_interval:
+  scan_interval:
     days: 0
     hours: 0
     minutes: 10
