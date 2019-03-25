@@ -5,6 +5,7 @@
 - platform: template
   sensors:
     date_template:
+      entity_id: sensor.time
       friendly_name: 'Date'
       icon_template: mdi:calendar
       value_template: '{{ as_timestamp(now()) | timestamp_custom("%c", True) }}'
