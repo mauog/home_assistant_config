@@ -9,7 +9,6 @@
     seconds: 00
     milliseconds: 0
   monitored_conditions:
-    - apparent_temperature
     - apparent_temperature_high
     - apparent_temperature_low
     - cloud_cover

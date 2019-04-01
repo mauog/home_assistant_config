@@ -6,7 +6,7 @@
   action:
   - data:
       message: Update for Home Assistant is available.
-    service: notify.ios_mauros_iphone
+    service: notify.ios_mauro_iphone
 - id: '1544266085345'
   alias: Lavatrice ON
   trigger:

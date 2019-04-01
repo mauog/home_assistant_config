@@ -25,8 +25,14 @@ config:
 # Uncomment this if you are using SSL/TLS, running in Docker container, etc.
 # http:
 #   base_url: example.duckdns.org:8123
+
+  auth_providers:
+     - type: homeassistant
+     - type: legacy_api_password
+       api_password: !secret http_api_password
+
 http:
-  api_password: !secret http_api_password
+  #api_password: !secret http_api_password
   base_url: !secret base_url
   ssl_certificate: !secret ssl_certificate
   ssl_key: !secret ssl_key
@@ -91,6 +97,10 @@ alexa_media:
     - email: !secret email_alexa
       password: !secret alexa_password
       url: amazon.it
+
+notify:
+  - platform: alexa_media
+    name: alexa_media
 
 switch: !include_dir_merge_list switches/
 
