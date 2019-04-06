@@ -1,27 +1,27 @@
-- platform: miflora
-  mac: 'C4:7C:8D:66:25:82'
-  name: Flower 1
-  force_update: false
-  median: 3
-  monitored_conditions:
-    - moisture
-    - light
-    - temperature
-    - conductivity
-    - battery
- 
-- platform: miflora
-  mac: 'C4:7C:8D:66:46:55'
-  name: Flower 2
-  force_update: false
-  median: 3
-  monitored_conditions:
-    - moisture
-    - light
-    - temperature
-    - conductivity
-    - battery
-
+#- platform: miflora
+#  mac: 'C4:7C:8D:66:25:82'
+#  name: Flower 1
+#  force_update: false
+#  median: 3
+#  monitored_conditions:
+#    - moisture
+#    - light
+#    - temperature
+#    - conductivity
+#    - battery
+# 
+#- platform: miflora
+#  mac: 'C4:7C:8D:66:46:55'
+#  name: Flower 2
+#  force_update: false
+#  median: 3
+#  monitored_conditions:
+#    - moisture
+#    - light
+#    - temperature
+#    - conductivity
+#    - battery
+#
 #- platform: miflora
 #  mac: 'C4:7C:8D:66:25:82'
 #  name: Flower 3
@@ -33,3 +33,23 @@
 #    - temperature
 #    - conductivity
 #    - battery
+- platform: mqtt
+  state_topic: miflora/herbs1/temperature
+  name: "MiFlora Temperature"
+  unit_of_measurement: "°C"
+- platform: mqtt
+  state_topic: miflora/herbs1/moisture
+  name: "MiFlora Moisture"
+  unit_of_measurement: "%"
+- platform: mqtt
+  state_topic: miflora/herbs1/light
+  name: "MiFlora Light"
+  unit_of_measurement: "lux"
+- platform: mqtt
+  state_topic: miflora/herbs1/conductivity
+  name: "MiFlora Conductivity"
+  unit_of_measurement: "us/cm"
+- platform: mqtt
+  state_topic: miflora/herbs1/battery
+  name: "MiFlora Battery"
+  unit_of_measurement: "%"

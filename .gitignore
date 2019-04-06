@@ -10,6 +10,7 @@
 !*.travis.yml
 !os_misc.tgz
 !custom_components
+custom_components/alexa_media/*
 *.conf
 *.txt
 *.log
