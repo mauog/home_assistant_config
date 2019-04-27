@@ -46,7 +46,7 @@
 - platform: template
   sensors:
     forecast_1:
-      entity_id: sensor.time
+      entity_id: []
       friendly_name_template: >
         {{ ( as_timestamp(now()) + (1 * 86400) ) | timestamp_custom('%A %d %B') }}
       value_template: > 
@@ -56,7 +56,7 @@
         {%- set mapper = {'rain':'pouring', 'cloudy':'cloudy', 'clear-day':'sunny', 'partly-cloudy-day':'partlycloudy', 'partly-cloudy-night':'partlycloudy', 'snow':'snowy', 'fog':'fog', 'wind':'windy'} %}
         {{ 'mdi:weather-'+mapper[current] if current in mapper else 'mdi:help-circle' }} 
     forecast_2:
-      entity_id: sensor.time
+      entity_id: []
       friendly_name_template: >
         {{ ( as_timestamp(now()) + (2 * 86400) ) | timestamp_custom('%A %d %B') }}
       value_template: > 
@@ -66,7 +66,7 @@
         {%- set mapper = {'rain':'pouring', 'cloudy':'cloudy', 'clear-day':'sunny', 'partly-cloudy-day':'partlycloudy', 'partly-cloudy-night':'partlycloudy', 'snow':'snowy', 'fog':'fog', 'wind':'windy'} %}
         {{ 'mdi:weather-'+mapper[current] if current in mapper else 'mdi:help-circle' }} 
     forecast_3:
-      entity_id: sensor.time
+      entity_id: []
       friendly_name_template: >
         {{ ( as_timestamp(now()) + (3 * 86400) ) | timestamp_custom('%A %d %B') }}
       value_template: > 
@@ -76,7 +76,7 @@
         {%- set mapper = {'rain':'pouring', 'cloudy':'cloudy', 'clear-day':'sunny', 'partly-cloudy-day':'partlycloudy', 'partly-cloudy-night':'partlycloudy', 'snow':'snowy', 'fog':'fog', 'wind':'windy'} %}
         {{ 'mdi:weather-'+mapper[current] if current in mapper else 'mdi:help-circle' }} 
     forecast_4:
-      entity_id: sensor.time
+      entity_id: []
       friendly_name_template: >
         {{ ( as_timestamp(now()) + (4 * 86400) ) | timestamp_custom('%A %d %B') }} 
       value_template: > 
@@ -86,7 +86,7 @@
         {%- set mapper = {'rain':'pouring', 'cloudy':'cloudy', 'clear-day':'sunny', 'partly-cloudy-day':'partlycloudy', 'partly-cloudy-night':'partlycloudy', 'snow':'snowy', 'fog':'fog', 'wind':'windy'} %}
         {{ 'mdi:weather-'+mapper[current] if current in mapper else 'mdi:help-circle' }} 
     forecast_5:
-      entity_id: sensor.time
+      entity_id: []
       friendly_name_template: >
         {{ ( as_timestamp(now()) + (5 * 86400) ) | timestamp_custom('%A %d %B') }}
       value_template: > 
@@ -96,7 +96,7 @@
         {%- set mapper = {'rain':'pouring', 'cloudy':'cloudy', 'clear-day':'sunny', 'partly-cloudy-day':'partlycloudy', 'partly-cloudy-night':'partlycloudy', 'snow':'snowy', 'fog':'fog', 'wind':'windy'} %}
         {{ 'mdi:weather-'+mapper[current] if current in mapper else 'mdi:help-circle' }} 
     forecast_6:
-      entity_id: sensor.time
+      entity_id: []
       friendly_name_template: >
         {{ ( as_timestamp(now()) + (6 * 86400) ) | timestamp_custom('%A %d %B') }}
       value_template: > 
@@ -106,7 +106,7 @@
         {%- set mapper = {'rain':'pouring', 'cloudy':'cloudy', 'clear-day':'sunny', 'partly-cloudy-day':'partlycloudy', 'partly-cloudy-night':'partlycloudy', 'snow':'snowy', 'fog':'fog', 'wind':'windy'} %}
         {{ 'mdi:weather-'+mapper[current] if current in mapper else 'mdi:help-circle' }} 
     forecast_7:
-      entity_id: sensor.time
+      entity_id: []
       friendly_name_template: >
         {{ ( as_timestamp(now()) + (7 * 86400) ) | timestamp_custom('%A %d %B') }}
       value_template: > 

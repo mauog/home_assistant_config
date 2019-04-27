@@ -1,55 +1,111 @@
-#- platform: miflora
-#  mac: 'C4:7C:8D:66:25:82'
-#  name: Flower 1
-#  force_update: false
-#  median: 3
-#  monitored_conditions:
-#    - moisture
-#    - light
-#    - temperature
-#    - conductivity
-#    - battery
-# 
-#- platform: miflora
-#  mac: 'C4:7C:8D:66:46:55'
-#  name: Flower 2
-#  force_update: false
-#  median: 3
-#  monitored_conditions:
-#    - moisture
-#    - light
-#    - temperature
-#    - conductivity
-#    - battery
-#
-#- platform: miflora
-#  mac: 'C4:7C:8D:66:25:82'
-#  name: Flower 3
-#  force_update: false
-#  median: 3
-#  monitored_conditions:
-#    - moisture
-#    - light
-#    - temperature
-#    - conductivity
-#    - battery
 - platform: mqtt
-  state_topic: miflora/herbs1/temperature
+  state_topic: 'bt-mqtt-gateway/miflora/herbs1/temperature'
   name: "MiFlora Temperature"
   unit_of_measurement: "°C"
 - platform: mqtt
-  state_topic: miflora/herbs1/moisture
+  state_topic: 'bt-mqtt-gateway/miflora/herbs1/moisture'
   name: "MiFlora Moisture"
   unit_of_measurement: "%"
 - platform: mqtt
-  state_topic: miflora/herbs1/light
+  state_topic: 'bt-mqtt-gateway/miflora/herbs1/light'
   name: "MiFlora Light"
   unit_of_measurement: "lux"
 - platform: mqtt
-  state_topic: miflora/herbs1/conductivity
+  state_topic: 'bt-mqtt-gateway/miflora/herbs1/conductivity'
   name: "MiFlora Conductivity"
   unit_of_measurement: "us/cm"
 - platform: mqtt
-  state_topic: miflora/herbs1/battery
+  state_topic: 'bt-mqtt-gateway/miflora/herbs1/battery'
   name: "MiFlora Battery"
   unit_of_measurement: "%"
+
+- platform: mqtt
+  state_topic: 'bt-mqtt-gateway/miflora/herbs2/temperature'
+  name: "MiFlora Temperature"
+  unit_of_measurement: "°C"
+- platform: mqtt
+  state_topic: 'bt-mqtt-gateway/miflora/herbs2/moisture'
+  name: "MiFlora Moisture"
+  unit_of_measurement: "%"
+- platform: mqtt
+  state_topic: 'bt-mqtt-gateway/miflora/herbs2/light'
+  name: "MiFlora Light"
+  unit_of_measurement: "lux"
+- platform: mqtt
+  state_topic: 'bt-mqtt-gateway/miflora/herbs2/conductivity'
+  name: "MiFlora Conductivity"
+  unit_of_measurement: "us/cm"
+- platform: mqtt
+  state_topic: 'bt-mqtt-gateway/miflora/herbs2/battery'
+  name: "MiFlora Battery"
+  unit_of_measurement: "%"
+
+- platform: mqtt
+  state_topic: 'bt-mqtt-gateway/miflora/herbs3/temperature'
+  name: "MiFlora Temperature"
+  unit_of_measurement: "°C"
+- platform: mqtt
+  state_topic: 'bt-mqtt-gateway/miflora/herbs3/moisture'
+  name: "MiFlora Moisture"
+  unit_of_measurement: "%"
+- platform: mqtt
+  state_topic: 'bt-mqtt-gateway/miflora/herbs3/light'
+  name: "MiFlora Light"
+  unit_of_measurement: "lux"
+- platform: mqtt
+  state_topic: 'bt-mqtt-gateway/miflora/herbs3/conductivity'
+  name: "MiFlora Conductivity"
+  unit_of_measurement: "us/cm"
+- platform: mqtt
+  state_topic: 'bt-mqtt-gateway/miflora/herbs3/battery'
+  name: "MiFlora Battery"
+  unit_of_measurement: "%"
+
+- platform: mqtt
+  state_topic: 'bt-mqtt-gateway/miflora/herbs4/temperature'
+  name: "MiFlora Temperature"
+  unit_of_measurement: "°C"
+- platform: mqtt
+  state_topic: 'bt-mqtt-gateway/miflora/herbs4/moisture'
+  name: "MiFlora Moisture"
+  unit_of_measurement: "%"
+- platform: mqtt
+  state_topic: 'bt-mqtt-gateway/miflora/herbs4/light'
+  name: "MiFlora Light"
+  unit_of_measurement: "lux"
+- platform: mqtt
+  state_topic: 'bt-mqtt-gateway/miflora/herbs4/conductivity'
+  name: "MiFlora Conductivity"
+  unit_of_measurement: "us/cm"
+- platform: mqtt
+  state_topic: 'bt-mqtt-gateway/miflora/herbs4/battery'
+  name: "MiFlora Battery"
+  unit_of_measurement: "%"
+
+- platform: template
+  sensors:
+    plant_moisture_2:
+      friendly_name: "Umidità del terreno"
+      unit_of_measurement: '%'
+      value_template: "{{ states('sensor.miflora_moisture_2') }}"
+      icon_template: 'mdi:water-percent'
+    plant_light_2:
+      friendly_name: "Luce"
+      unit_of_measurement: 'lux'
+      value_template: "{{ states('sensor.miflora_light_2') }}"
+      icon_template: 'mdi:lightbulb-on'   
+    plant_conductivity_2:
+      friendly_name: "Conduttività del terreno"
+      unit_of_measurement: 'us/cm'
+      value_template: "{{ states('sensor.miflora_conductivity_2') }}"
+      icon_template: 'mdi:pot'   
+    plant_temperature_2:
+      friendly_name: "Temperatura"
+      unit_of_measurement: '°C'
+      value_template: "{{ states('sensor.miflora_temperature_2') }}"
+      icon_template: 'mdi:thermometer'   
+    plant_battery_2:
+      friendly_name: "Livello batteria"
+      unit_of_measurement: '%'
+      value_template: "{{ states('sensor.miflora_battery_2') }}"
+      icon_template: 'mdi:battery'   
