@@ -1,6 +1,0 @@
-#- platform: tplink
-#  name: lavatrice
-#  host: 10.9.12.100
-#- platform: tplink
-#  name: lucine_casa
-#  host: 10.9.12.106

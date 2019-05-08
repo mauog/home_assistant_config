@@ -74,6 +74,12 @@ sun:
 # Sensors
 sensor: !include_dir_merge_list sensors/
 
+tplink:
+  discovery: false
+  switch:
+    - host: 10.9.12.100
+#   - host: 10.9.12.106
+
 # Cloud
 cloud:
 
@@ -101,8 +107,6 @@ alexa_media:
 notify:
   - platform: alexa_media
     name: alexa_media
-
-switch: !include_dir_merge_list switches/
 
 ifttt:
   key: !secret my_ifttt_key
