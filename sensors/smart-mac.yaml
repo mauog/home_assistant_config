@@ -1,0 +1,19 @@
+- platform: mqtt
+  name: "Tensione"
+  state_topic: "1694498882.V"
+  unit_of_measurement: "V"
+  force_update:
+- platform: mqtt
+  name: "Corrente"
+  state_topic: "1694498882.A"
+  unit_of_measurement: "A"
+  force_update:
+- platform: mqtt
+  name: "Potenza"
+  state_topic: "1694498882.W"
+  unit_of_measurement: "W"
+  force_update:
+- platform: mqtt
+  name: "Sfasamento"
+  state_topic: "1694498882.PF"
+  force_update:

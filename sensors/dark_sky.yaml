@@ -45,6 +45,45 @@
     - 7
 - platform: template
   sensors:
+    precip_accumulation_0d:
+      entity_id: []
+      friendly_name: "Precipitation accumulation"
+      value_template: > 
+        {{ states('sensor.dark_sky_precip_accumulation_0d') }}
+      icon_template: > 
+       {{ 'mdi:cup-water' }}
+    low_temp_1d:
+      entity_id: []
+      friendly_name: "Overnight low temperature"
+      unit_of_measurement: '°C'
+      value_template: >
+        {{ states('sensor.dark_sky_overnight_low_temperature_1d') }}
+      icon_template: >
+        {{ 'mdi:thermometer-minus' }}
+    high_temp_1d:
+      entity_id: []
+      friendly_name: "Daytime high temperature"
+      unit_of_measurement: '°C'
+      value_template: >
+        {{ states('sensor.dark_sky_daytime_high_temperature_1d') }}
+      icon_template: >
+        {{ 'mdi:thermometer-plus' }}
+    cloud_coverage:
+      entity_id: []
+      friendly_name: "Cloud coverage"
+      unit_of_measurement: '%'
+      value_template: >
+        {{ states('sensor.dark_sky_cloud_coverage') }} 
+      icon_template: >
+        {{ 'mdi:weather-partlycloudy' }}
+    moon_phase_0d:
+      entity_id: []
+      friendly_name: "Moon phase"
+      value_template: >
+        {{ states('sensor.dark_sky_moon_phase_0d') }}             
+      icon_template: >
+        {{ 'mdi:weather-night' }}
+
     forecast_1:
       entity_id: []
       friendly_name_template: >

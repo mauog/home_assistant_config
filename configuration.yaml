@@ -74,6 +74,11 @@ sun:
 # Sensors
 sensor: !include_dir_merge_list sensors/
 
+api:
+
+alexa:
+  smart_home:
+
 tplink:
   discovery: false
   switch:
@@ -81,7 +86,7 @@ tplink:
 #   - host: 10.9.12.106
 
 # Cloud
-cloud:
+#cloud:
 
 group: !include_dir_merge_named  groups/
 
@@ -155,4 +160,3 @@ logger:
 #    homeassistant.components.mqtt: debug
 #    homeassistant.components.switch.tplink: debug
 #    homeassistant.components.deconz: debug
-
