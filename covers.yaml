@@ -1,0 +1,20 @@
+- platform: group
+  name: "Tapparelle"
+  entities: cover.tapparella_camera
+ 
+- platform: mqtt
+  unique_id: "tapparella_camera"
+  name: "Tapparella camera"
+  state_topic: "shellies/shellyswitch25-E66CFA/roller/0"   
+  command_topic: "shellies/shellyswitch25-E66CFA/roller/0/command"  
+  payload_open: "open"
+  payload_close: "close"
+  payload_stop: "stop"
+  state_open: "open"
+  state_closed: "close"
+  retain: false
+  optimistic: false
+  qos: 0
+  position_open: 100
+  position_closed: 0
+  value_template: '{{ value.x }}'

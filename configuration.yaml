@@ -77,7 +77,8 @@ sensor: !include_dir_merge_list sensors/
 api:
 
 alexa:
-  smart_home:
+  smart_home: !include alexa_smart_home.yaml
+    
 
 tplink:
   discovery: false
@@ -149,6 +150,9 @@ custom_updater:
   track:
    - cards
    - components
+
+
+cover: !include covers.yaml
 
 system_health:
 

@@ -1,0 +1,21 @@
+filter:
+  exclude_domains:
+    - alert
+    - automation
+    - climate
+    - fan
+    - group
+    - input_boolean
+    - light
+    - lock
+    - media_player
+    - scene
+    - script
+    - sensor
+  include_domains:
+    - cover
+entity_config:
+  cover.tapparella_camera:
+    name: Tapparella camera
+    display_categories: OTHER
+      
