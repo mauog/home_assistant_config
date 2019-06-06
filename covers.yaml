@@ -1,20 +1,49 @@
 - platform: group
   name: "Tapparelle"
-  entities: cover.tapparella_camera
+  entities: 
+    - cover.tapparella_camera
+    - cover.tapparella_cameretta
  
 - platform: mqtt
   unique_id: "tapparella_camera"
   name: "Tapparella camera"
   state_topic: "shellies/shellyswitch25-E66CFA/roller/0"   
   command_topic: "shellies/shellyswitch25-E66CFA/roller/0/command"  
+  position_topic: "shellies/shellyswitch25-E66CFA/roller/0/pos"
+  set_position_topic: "shellies/shellyswitch25-E66CFA/roller/0/commnad/pos"
+#  availability_topic: "shellies/shellyswitch25-E66CFA/online"
+  payload_available: "true"
+  payload_not_available: "false"
   payload_open: "open"
   payload_close: "close"
   payload_stop: "stop"
   state_open: "open"
   state_closed: "close"
-  retain: false
+  retain: true
   optimistic: false
-  qos: 0
+  qos: 1
+  position_open: 100
+  position_closed: 0
+  value_template: '{{ value.x }}'
+
+- platform: mqtt
+  unique_id: "tapparella_cameretta"
+  name: "Tapparella cameretta"
+  state_topic: "shellies/shellyswitch25-00B763/roller/0"
+  command_topic: "shellies/shellyswitch25-00B763/roller/0/command"
+  position_topic: "shellies/shellyswitch25-00B763/roller/0/pos"
+  set_position_topic: "shellies/shellyswitch25-00B763/roller/0/commnad/pos"
+#  availability_topic: "shellies/shellyswitch25-00B763/online"
+  payload_available: "true"
+  payload_not_available: "false"
+  payload_open: "open"
+  payload_close: "close"
+  payload_stop: "stop"
+  state_open: "open"
+  state_closed: "close"
+  retain: true
+  optimistic: false
+  qos: 1
   position_open: 100
   position_closed: 0
   value_template: '{{ value.x }}'
