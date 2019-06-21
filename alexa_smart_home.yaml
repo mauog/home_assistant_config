@@ -17,8 +17,12 @@ filter:
     - sensor
   include_domains:
     - cover
+  include_entities:
+    - switch.luce_scale
 entity_config:
   cover.tapparella_camera:
     name: Tapparella camera
     display_categories: OTHER
-      
+  switch.luce_scale:
+    name: Luce scale
+    display_categories: LIGHT 
