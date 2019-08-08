@@ -145,14 +145,26 @@ deconz:
 
 input_boolean: !include boolean.yaml
 
+binary_sensor:
+  - platform: ping
+    name: allarme
+    host: 10.9.12.16
+    count: 5
+    scan_interval: 300
 
-custom_updater:
-  component_urls:
-    - https://raw.githubusercontent.com/keatontaylor/alexa_media_player/master/custom_components.json
-  track:
-   - cards
-   - components
+#custom_updater:
+#  component_urls:
+#    - https://raw.githubusercontent.com/keatontaylor/alexa_media_player/master/custom_components.json
+#  track:
+#   - cards
+#   - components
 
+hacs:
+  token: !secret hacs_git_token
+  sidepanel_title: "HACS Community"
+  appdaemon: false
+  python_script: false
+  theme: false
 
 cover: !include covers.yaml
 

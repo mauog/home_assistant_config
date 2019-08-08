@@ -19,7 +19,7 @@
   payload_stop: "stop"
   state_open: "open"
   state_closed: "close"
-  retain: true
+  retain: false
   optimistic: false
   qos: 1
   position_open: 100
@@ -41,7 +41,7 @@
   payload_stop: "stop"
   state_open: "open"
   state_closed: "close"
-  retain: true
+  retain: false
   optimistic: false
   qos: 1
   position_open: 100

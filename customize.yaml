@@ -1,0 +1,2 @@
+binary_sensor.ping_binary_sensor:
+  friendly_name: Scheda IP allarme

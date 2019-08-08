@@ -5,6 +5,6 @@
   command_topic: "shellies/shelly1-BA2205/relay/0/command"
   payload_on: "on"
   payload_off: "off"
-  retain: true
+  retain: false
   optimistic: false
   qos: 1
