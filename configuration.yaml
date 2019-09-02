@@ -166,6 +166,7 @@ hacs:
   python_script: false
   theme: false
 
+
 cover: !include covers.yaml
 
 system_health:

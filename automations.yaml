@@ -33,8 +33,9 @@
 - id: '1558902673626'
   alias: Update Available Notifications
   trigger:
-  - entity_id: updater.updater
+  - entity_id: binary_sensor.updater
     platform: state
+    to: 'on'
   condition: []
   action:
   - data:
